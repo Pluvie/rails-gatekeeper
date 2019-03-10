@@ -32,8 +32,8 @@ DatabaseCleaner[:mongoid].clean
 # require only the support files necessary.
 #
 # Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
-Dir[Freecommerce::Engine.root.join('spec', 'shared', '**', '*.rb')].each { |f| require f }
-Dir[Freecommerce::Engine.root.join('spec', 'factories', '**', '*.rb')].each { |f| require f }
+Dir[Gatekeeper::Engine.root.join('spec', 'shared', '**', '*.rb')].each { |f| require f }
+Dir[Gatekeeper::Engine.root.join('spec', 'factories', '**', '*.rb')].each { |f| require f }
 require 'factories_helper'
 
 RSpec.configure do |config|

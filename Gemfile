@@ -11,5 +11,23 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
+group :development, :test do
+  # Colors for strings!
+  gem 'rainbow'
+  # Awesome console
+  gem 'awesome_rails_console'
+  gem 'hirb'
+  gem 'hirb-unicode'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  # Test
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-collection_matchers'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'faker'
+end
+
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
