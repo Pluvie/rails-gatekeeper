@@ -1,6 +1,6 @@
 class GatekeeperController < ApplicationController
 
-  include Gatekeeper::Respondable
+  include Gatekeeper::Responder
 
   def index
   end

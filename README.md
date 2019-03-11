@@ -67,7 +67,7 @@ book.info(customer)     # { :name => "Lord of the Rings" }
 ```
 
 ### Controllers
-On controllers, you can include `Gatekeeper::Respondable` to generate automatic responses for your HTML, JS, or JSON views. These responses contains information based on the `allowed_info` method specified in your models.
+On controllers, you can include `Gatekeeper::Responder` to generate automatic responses for your HTML, JS, or JSON views. These responses contains information based on the `allowed_info` method specified in your models.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

@@ -1,5 +1,5 @@
 module Gatekeeper
-  module Respondable
+  module Responder
 
     extend ActiveSupport::Concern
 
@@ -13,7 +13,6 @@ module Gatekeeper
         ##
         # Handles response based on request format.
         def handle_response
-          fatto = performed?
           unless performed?
             if @error.present?
               handle_error(@error)
