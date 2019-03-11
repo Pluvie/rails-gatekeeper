@@ -51,6 +51,16 @@ module Gatekeeper
       end
     end
 
+    ##
+    # Variables to not include in controller response.
+    #
+    # @return [Array<Symbol>] ignored variables.
+    def response_ignored_variables
+      Gatekeeper.configuration.response_ignored_variables | [
+        :@marked_for_same_origin_verification, :@browser,
+        :@behavior, :@options, :@args, :@shell, :@destination_stack ]
+    end
+
   end
 
 end

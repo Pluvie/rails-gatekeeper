@@ -19,11 +19,15 @@ module Mongoid
 
     ##
     # Returns fields, embeds and relations based on current user's allowed info.
-    def info(current_user, options = {})
-      if self.class.respond_to? :allowed_info_names
-        exposed_info = self.class.allowed_info_names(current_user)
+    def info(current_user = nil, options = {})
+      if current_user.present?
+        if self.class.respond_to? :allowed_info_names
+          exposed_info = self.class.allowed_info_names(current_user)
+        else
+          exposed_info = Gatekeeper.default_allowed_info_names(current_user, self.class)
+        end
       else
-        exposed_info = Gatekeeper.default_allowed_info_names(current_user, self.class)
+        exposed_info = document_fields | document_embeds
       end
 
       output = {}

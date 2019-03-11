@@ -5,7 +5,7 @@ require "gatekeeper/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "gatekeeper"
+  spec.name        = "rails-mongoid-gatekeeper"
   spec.version     = Gatekeeper::VERSION
   spec.authors     = ["Francesco Ballardin"]
   spec.email       = ["francesco.ballardin@develonproject.com"]
@@ -19,4 +19,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 5.2.2"
   spec.add_dependency "mongoid", ">= 7.0.0"
   spec.add_dependency "bson_ext"
+  spec.add_dependency "responders"
 end

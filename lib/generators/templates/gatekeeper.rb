@@ -16,4 +16,11 @@ Gatekeeper.configure do |config|
   #
   # config.bypass_allowed_info = nil
 
+  ##
+  # Sets which controller instance variables to not include in the response.
+  #
+  # Defaults to empty array.
+  #
+  # config.response_ignored_variables = []
+
 end
