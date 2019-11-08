@@ -33,8 +33,8 @@ module Gatekeeper
     #
     # @return [Array<Symbol>] default allowed info names.
     def default_allowed_info_names(user, model_class, &block)
-      if @configuration.bypass_allowed_info.respond_to? :call
-        bypassable = @configuration.bypass_allowed_info.call(user)
+      if configuration.bypass_allowed_info.respond_to? :call
+        bypassable = configuration.bypass_allowed_info.call(user)
       else
         bypassable = false
       end
